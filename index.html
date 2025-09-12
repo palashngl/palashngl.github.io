@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Palash Yuvraj Ingle — Research Professor (Sejong University)</title>
+  <meta name="description" content="Homepage of Dr. Palash Yuvraj Ingle — Research Professor at Sejong University, Seoul. AI & Robotics for safety‑critical systems: video surveillance, IoT, SLAM, and LiDAR–camera fusion for autonomous vehicles. Publications, projects, awards, and media." />
+  <meta name="author" content="Palash Ingle" />
+  <meta property="og:title" content="Palash Ingle — Research Professor & AI Researcher" />
+  <meta property="og:description" content="AI & Robotics research: surveillance, IoT, SLAM, LiDAR fusion, and disaster‑response systems. Based in Seoul, South Korea." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='80'%3E%F0%9F%AA%84%3C/text%3E%3C/svg%3E" />
+  <link rel="preload" as="image" href="images/palash.jpg" />
+  <style id="fixes">
+    /* Ensure Anatta logo stays small and neat */
+    .hi-anatta img{max-width:120px;height:auto;margin:2px 6px 0 0}
+    .logo-anatta{height:56px !important;width:auto}
+    /* Make INTOPER card vivid and readable */
+    .hi-intoper{background:linear-gradient(135deg,#3b82f6,#06b6d4);color:#fff}
+    .hi-intoper a{color:#fff;text-decoration:underline}
+  </style>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a; /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --card: #f8fafc; /* slate-50 */
+      --border: #e2e8f0; /* slate-200 */
+      --link: #0ea5e9; /* sky-500 */
+      --accent: #22c55e; /* green-500 */
+      --ring: rgba(14, 165, 233, 0.35);
+    }
+    [data-theme="dark"]:root {
+      --bg: #0b1020;
+      --fg: #e5e7eb; /* slate-200 */
+      --muted: #94a3b8; /* slate-400 */
+      --card: #0f172a; /* slate-900 */
+      --border: #1f2937; /* gray-800 */
+      --link: #38bdf8; /* sky-400 */
+      --accent: #34d399; /* green-400 */
+      --ring: rgba(56, 189, 248, 0.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--fg);
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--bg) 70%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+    .brand { font-weight: 800; letter-spacing: 0.2px; }
+    .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:14px; border:1px solid var(--border); background: var(--card); color: var(--fg); text-decoration:none; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+    .btn:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.08); translate: 0 -1px; }
+    .btn-icon { width: 20px; height: 20px; display: inline-block; }
+    .hero { padding: 72px 0 40px; }
+    .hero h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 12px; }
+    .hero p.lead { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); margin: 0 0 18px; }
+    .tags { display:flex; gap:8px; flex-wrap: wrap; margin: 18px 0 0; }
+    .tag { padding:6px 10px; border-radius:999px; border:1px solid var(--border); background: var(--card); font-size: 13px; }
+    section { padding: 32px 0; }
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .card { grid-column: span 12; border: 1px solid var(--border); background: var(--card); border-radius: 18px; padding: 18px; transition: transform .2s ease, box-shadow .2s ease; }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+    .two-col { display: grid; grid-template-columns: 1fr; gap: 22px; }
+    @media (min-width: 880px) { .two-col { grid-template-columns: 1.2fr 1fr; } }
+    .avatar { width: 120px; height: 120px; border-radius: 22px; object-fit: cover; border:1px solid var(--border); background: var(--card); }
+    .list { list-style: none; padding: 0; margin: 0; }
+    .list li { padding: 10px 0; border-bottom: 1px dashed var(--border); }
+    .pill { background: color-mix(in srgb, var(--accent) 16%, var(--card)); border: 1px solid color-mix(in srgb, var(--accent) 50%, var(--border)); color: var(--fg); }
+    .meta{font-size:13px;color:var(--muted);} .pubs>li{padding:12px 0;}
+
+    /* Animated tinted sections */
+    :root{ --t-sky:#e0f2fe; --t-violet:#ede9fe; --t-emerald:#d1fae5; --t-amber:#fef3c7; --t-rose:#ffe4e6; --t-slate:#f1f5f9; }
+    [data-theme="dark"]:root{ --t-sky:#07222e; --t-violet:#1a1030; --t-emerald:#0b2419; --t-amber:#2a1c07; --t-rose:#2a0e17; --t-slate:#0b1220; }
+    .sectionfx{
+      border:1px solid var(--border); border-radius:22px; padding:28px; margin:18px 0;
+      background: linear-gradient(135deg,
+        color-mix(in srgb, var(--tint-a), transparent 65%),
+        color-mix(in srgb, var(--tint-b, var(--t-slate)), transparent 70%) 60%,
+        transparent 100%);
+      background-size:200% 200%;
+      animation: gradientMove 26s ease-in-out infinite;
+    }
+    @keyframes gradientMove { 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
+    /* Section-specific tints */
+    #about.sectionfx { --tint-a: var(--t-sky); --tint-b: var(--t-slate); }
+    #work.sectionfx { --tint-a: var(--t-violet); --tint-b: var(--t-slate); }
+    #projects.sectionfx { --tint-a: var(--t-emerald); --tint-b: var(--t-slate); }
+    #publications.sectionfx { --tint-a: var(--t-amber); --tint-b: var(--t-slate); }
+    #awards.sectionfx { --tint-a: var(--t-rose); --tint-b: var(--t-slate); }
+    #media.sectionfx { --tint-a: var(--t-sky); --tint-b: var(--t-slate); }
+    #contact.sectionfx { --tint-a: var(--t-violet); --tint-b: var(--t-slate); }
+
+    /* Colored section headings */
+    .sectionfx>h2{position:relative;padding-left:14px;margin:0 0 12px;font-size:clamp(22px,3vw,28px);font-weight:800;letter-spacing:.2px;color:var(--title-color, var(--fg));}
+    .sectionfx>h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:6px;border-radius:999px;background:linear-gradient(180deg,var(--accent-start,#38bdf8),var(--accent-end,#0ea5e9));box-shadow:0 4px 10px color-mix(in srgb, var(--accent-start,#38bdf8), transparent 70%);background-size:100% 200%;animation:hueFlow 10s ease-in-out infinite;}
+    @keyframes hueFlow{0%{background-position:0% 0%;}50%{background-position:0% 100%;}100%{background-position:0% 0%;}}
+    #about{--title-color:#0284c7;--accent-start:#38bdf8;--accent-end:#0ea5e9;}
+    #work{--title-color:#7c3aed;--accent-start:#c4b5fd;--accent-end:#7c3aed;}
+    #projects{--title-color:#059669;--accent-start:#34d399;--accent-end:#059669;}
+    #publications{--title-color:#b45309;--accent-start:#f59e0b;--accent-end:#b45309;}
+    #awards{--title-color:#e11d48;--accent-start:#fb7185;--accent-end:#e11d48;}
+    #media{--title-color:#2563eb;--accent-start:#60a5fa;--accent-end:#2563eb;}
+    #contact{--title-color:#9333ea;--accent-start:#c084fc;--accent-end:#9333ea;}
+
+    /* Highlight cards under portrait */
+    .about-highlight{margin-top:14px; display:grid; gap:12px;}
+    .hi-card{border-radius:16px; padding:12px 14px; color:#fff; box-shadow:0 12px 28px rgba(0,0,0,.18); border:0;}
+    .hi-card h4{margin:0 0 6px; font-size:16px;}
+    .hi-card p{margin:0; color:rgba(255,255,255,.95)}
+    .hi-mini{font-size:12px; opacity:.9;}
+    .hi-zero{background:linear-gradient(135deg,#f43f5e,#8b5cf6);} /* rose→violet */
+    .hi-anatta{background:linear-gradient(135deg,#06b6d4,#16a34a);} /* cyan→green */
+    .hi-anatta .brandline{display:flex; align-items:center; gap:10px;}
+    \1
+    .hi-intoper{background:linear-gradient(135deg,#3b82f6,#06b6d4);} /* blue→cyan */
+
+    /* Publication tabs */
+    .pub-tabs .tag{border:none;font-weight:700;letter-spacing:.2px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+    [data-theme="dark"] .pub-tabs .tag{box-shadow:0 4px 14px rgba(0,0,0,.4)}
+    .pub-tabs .tag:nth-child(1){background:linear-gradient(135deg,#38bdf8,#0284c7); color:#fff}
+    .pub-tabs .tag:nth-child(2){background:linear-gradient(135deg,#a78bfa,#7c3aed); color:#fff}
+    .pub-tabs .tag:nth-child(3){background:linear-gradient(135deg,#fcd34d,#eab308); color:#1f2937}
+
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Palash Ingle</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#awards">Awards</a>
+          <a href="#media">Media</a>
+          <a href="#contact">Contact</a>
+          <button id="themeToggle" class="btn" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span>Theme</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <h1>Hi, I'm Dr. Palash Yuvraj Ingle</h1>
+      <p class="lead">Research Professor at <strong>Sejong University</strong>, Seoul. I build <strong>AI & Robotics</strong> systems for safety‑critical environments: video surveillance, IoT, <strong>SLAM</strong>, and <strong>LiDAR–camera fusion</strong> for autonomous vehicles.</p>
+      <div class="tags">
+        <span class="tag">AI & Robotics</span>
+        <span class="tag">SLAM</span>
+        <span class="tag">Autonomous Systems</span>
+        <span class="tag">LiDAR Fusion</span>
+        <span class="tag">Video Surveillance</span>
+        <span class="tag">IoT Security</span>
+        <span class="tag">Transformer models</span>
+      </div>
+    </section>
+
+    <section id="about" class="two-col sectionfx">
+      <div>
+        <h2>About</h2>
+        <p>Dr. Palash Yuvraj Ingle is a <strong>Research Professor</strong> in the <em>Department of Computer Science and Information Security</em> and <em>Convergence Engineering for Intelligent Drone</em> at <strong>Sejong University</strong>, Seoul, South Korea.</p>
+
+        <h3>Key research areas</h3>
+        <ul class="list">
+          <li><strong>Artificial intelligence for security</strong> — video surveillance and the Internet of Things (IoT).</li>
+          <li><strong>LiDAR</strong> technology and <strong>sensory fusion</strong> for autonomous vehicles.</li>
+          <li><strong>Robotics</strong> — autonomous systems, SLAM, and early humanoid manipulation/tele‑operation research.</li>
+        </ul>
+
+        <h3>Career summary</h3>
+        <ul class="list">
+          <li><strong>Research Professor</strong>, Sejong University, Seoul, South Korea — Departments: Computer Science & Information Security; Convergence Engineering for Intelligent Drone (current).</li>
+          <li><strong>Postdoctoral Researcher</strong>, Sejong University, Seoul, South Korea — completed postdoctoral appointment.</li>
+          <li><strong>Assistant Professor</strong>, K.J. Somaiya College of Science & Commerce, Mumbai — prior academic position in India.</li>
+        </ul>
+
+        <h3>Educational background</h3>
+        <ul class="list">
+          <li><strong>Ph.D.</strong> (Dual Ph.d. Degree)<em> in Computer & Information Security </em>  and <em> Convergence Engineering for Intelligent Drone </em>— Sejong University, Seoul, <span class="meta">2023</span></li>
+          <li><strong>M.Tech</strong> in Computer Science & Engineering — J.C. Bose University of Science & Technology (formerly YMCA), <span class="meta">2019</span></li>
+          <li><strong>M.Sc.</strong> in Information Technology — Mumbai University, <span class="meta">2016</span></li>
+          <li><strong>NET Qualified</strong> — National Eligibility Test (NET)</li>
+        </ul>
+
+        <h3>Research activity</h3>
+        <p>His scientific contributions appear on <em>IEEE Xplore</em>, <em>ORCID</em>, <em>ACM</em> and <em>ResearchGate</em>. He has co‑authored work on video synopsis, real‑time object detection for surveillance, and blockchain‑based security for vehicles.</p>
+      </div>
+      <aside>
+        <img class="avatar" src="images/me.jpg" srcset="images/me.jpg 1x, images/me@2x.jpg 2x" alt="Palash Ingle portrait" loading="eager" decoding="async" />
+        <ul class="list" style="margin-top:14px;">
+          <li><strong>Location:</strong> Seoul, South Korea</li>
+          <li><strong>Email:</strong> <a href="mailto:palashngl@gmail.com">palashngl@gmail.com</a></li>
+          <li><strong>Resume/CV:</strong><a href="Palashcv.pdf" target="_blank" rel="noopener" download></a>Download PDF</a></li>
+          <li><strong>Profiles:</strong> <a href="https://ieeexplore.ieee.org/author/368048914471319" onclick="alert('IEEE Xplore link')">IEEE Xplore</a> · <a href="https://orcid.org/0000-0002-1118-1295" onclick="alert('Opening ORCID link')">ORCID</a> · <a href="https://www.researchgate.net/profile/Palash-Ingle-2" onclick="alert('Opening ResearchGate')">ResearchGate</a></li>
+        </ul>
+        <div class="about-highlight">
+          <div class="hi-card hi-zero">
+            <h4>President & Founder — ZERO</h4>
+            <p><strong>Zealous Emerging Revolution Organization</strong> (ZERO): community upliftment in <strong>Mumbai's slums</strong> and <strong>rural</strong> regions through education, health, and tech‑enabled initiatives.</p>
+            <p class="hi-mini">Location: Mumbai, India</p>
+          </div>
+          <div class="hi-card hi-anatta">
+            <div class="brandline">
+              <img class="logo-anatta" src="images/anatta-logo.png" srcset="images/anatta-logo.png 1x, images/anatta-logo@2x.png 2x" alt="Anatta Intelligence Labs logo" />
+              <h4 style="margin:0;">Founder — Anatta Intelligence Labs</h4>
+            </div>
+            <p><em>“Transcending Self. Transforming Systems.”</em> Focus areas: <strong>SkyLogic</strong> (AI drones), <strong>VigyaanTron</strong> (disaster robotics), and <strong>NeuroVenom</strong> (scorpionomics).</p>
+            <p class="hi-mini">Location: Rural Malkapur, Buldhana, India</p>
+          </div>
+          <div class="hi-card hi-intoper">
+            <h4>Member — INTOPER</h4>
+            <p><strong>INTOPER</strong> a  startup  with a global network of researchers and professionals contributes  across AI,robotics and IoT.</p>
+            <p class="hi-mini">Location: Seoul, South Korea · <a href="https://intoper.com/" target="_blank" rel="noopener">intoper.com</a></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="work" class="sectionfx">
+      <h2>Work</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Research Professor — Sejong University</h3>
+          <p>Departments: <em>Computer Science & Information Security</em>; <em>Convergence Engineering for Intelligent Drone</em>. Based in Seoul, South Korea. Leading applied AI in security, sensor fusion, and real‑time systems.</p>
+        </article>
+        <article class="card">
+          <h3>Postdoctoral Researcher — Sejong University</h3>
+          <p>Completed postdoctoral research focusing on video surveillance, IoT security, and LiDAR‑driven sensor fusion.</p>
+        </article>
+        <article class="card">
+          <h3>Assistant Professor — K.J. Somaiya College of Science & Commerce, Mumbai</h3>
+          <p>Taught computer science and conducted early research before transitioning to a research‑focused role in South Korea.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="sectionfx">
+      <h2>Projects</h2>
+      <div class="tags" aria-label="Currently working on">
+        <span class="tag pill">Collaborative Intelligence for Disaster SLAM</span>
+        <span class="tag pill">LiDAR Mapping</span>
+        <span class="tag pill">Abnormal/Drone Video Synopsis</span>
+        <span class="tag pill">NeuroLink Drive</span>
+        <span class="tag pill">Humanoid Robot</span>
+      </div>
+      <p class="meta" style="color:var(--muted); margin:8px 0 18px;">Updated Sep 12, 2025</p>
+
+      <article class="card">
+        <h3>Collaborative Intelligence for Disaster SLAM (CID‑SLAM)</h3>
+        <p>Unified R&D track for fire/disaster response that combines <strong>visual‑inertial SLAM</strong>, <strong>multi‑sensor fusion</strong> (RGB, LiDAR, thermal, gas/smoke/flame/IR/temperature), and <strong>LLM‑aided narration</strong> for situational awareness. Goal: localize ignition points, co‑build maps, and generate actionable summaries for first responders.</p>
+        <ul class="list">
+          <li><strong>SLAM‑based Fire Localization</strong> — Fuse fire/object detection with SLAM + GPS to geo‑pin ignition locations and track fire spread. <a href="https://github.com/palashngl/Fire_detection_system_DST_Transformer_CNN" onclick="alert('Opening repo')">Repo/Design</a></li>
+          <li><strong>FireVerse3D (UE5 Simulations)</strong> — Procedural UE5 fire scenes to synthesize training data with domain randomization and sensor models. <a href="#" onclick="alert('Opening dataset')">Dataset</a></li>
+          <li><strong>VisionInferNet</strong> — Xception+SE model (focal loss) for robust fire image classification; supports CID‑SLAM perception stack. <a href="#" onclick="alert('Add paper or repo link'); return false;">Repo</a></li>
+          <li><strong>FireFormer</strong> — Transformer‑based multi‑sensor fusion using DST to output calibrated fire/no‑fire confidence. <a href="https://github.com/OnlyPaperT/FireFormer_dataset" onclick="alert('Opening repo'); return false;">GitHub/Paper</a></li>
+          <li><strong>FireSentryV3</strong> — CNN backbone for rapid image‑level fire triage on edge devices. <a href="https://github.com/OnlyPaperT/FireFormer_dataset" onclick="alert('Opening repo'); return false;">GitHub</a></li>
+          <li><strong>FireNarrator</strong> — LLM pipeline that converts sensor/vision streams into concise incident synopses for human teams. <a href="https://github.com/palashngl/FireNarrator" onclick="alert('Opening repo'); return false;">Project</a></li>
+        </ul>
+      </article>
+
+      <div class="grid" style="margin-top:18px;">
+        <article class="card">
+          <h3>LiDAR Mapping in Autonomous Vehicle</h3>
+          <p>Real‑time LiDAR mapping with loop‑closure and pose‑graph optimization. Produces occupancy/TSDF maps and drivable area layers for downstream planning.</p>
+          <p><a href="#" onclick="alert('Add demo or notebook'); return false;">Demo</a></p>
+        </article>
+        <article class="card">
+          <h3>Abnormal Video Synopsis</h3>
+          <p>Detect anomalies in long surveillance streams and compose a brief synopsis ranked by anomaly score for rapid review.</p>
+          <p><a href="#" onclick="alert('Add paper or demo link'); return false;">Paper/Demo</a></p>
+        </article>
+        <article class="card">
+          <h3>Drone Video Synopsis</h3>
+          <p>Compressed mission summaries from UAV footage via trajectory‑tube clustering fused with flight telemetry; outputs geo‑tagged highlight reels.</p>
+          <p><a href="#" onclick="alert('Add flight demo'); return false;">Demo</a></p>
+        </article>
+        <article class="card">
+          <h3>NeuroLink Drive (Autonomous Vehicle)</h3>
+          <p>Learning module that links perception to low‑latency driving intent and path updates; explores sensor fusion and neural controllers in simulation.</p>
+          <p><a href="#" onclick="alert('Add design doc or sim video'); return false;">Design/Video</a></p>
+        </article>
+        <article class="card">
+          <h3>Humanoid Robot</h3>
+          <p>Research on locomotion control, perception, and tele‑operation; early work on whole‑body control and manipulation under uncertainty.</p>
+          <p><a href="#" onclick="alert('Add build log or CAD'); return false;">Build Log</a></p>
+        </article>
+      </div>  
+    </section>
+
+    <section id="publications" class="sectionfx">
+      <h2>Publications</h2>
+      <div class="tags pub-tabs" aria-label="Publication groups">
+        <a class="tag pill" href="#pub-journals">Journals</a>
+        <a class="tag pill" href="#pub-conferences">Conferences</a>
+        <a class="tag pill" href="#pub-preprints">Preprints & Others</a>
+      </div>
+
+      <h3 id="pub-journals" class="pub-heading journal">Journal Articles</h3>
+      <ol class="list pubs">
+        <li><strong>Real‑time abnormal object detection for video surveillance in smart cities</strong> — P.Y. Ingle, Y.G. Kim. <em>Sensors</em> 22(10):3862, 2022.</li>
+        <li><strong>DVS: A drone video synopsis towards storing and analyzing drone surveillance data in smart cities</strong> — P.Y. Ingle, Y.K. Kim, Y.G. Kim. <em>Systems</em> 10(5):170, 2022.</li>
+        <li><strong>Multiview abnormal video synopsis in real‑time</strong> — P.Y. Ingle, Y.G. Kim. <em>Engineering Applications of Artificial Intelligence</em> 123:106406, 2023.</li>
+        <li><strong>Video synopsis algorithms and framework: A survey and comparative evaluation</strong> — P.Y. Ingle, Y.G. Kim. <em>Systems</em> 11(2):108, 2023.</li>
+        <li><strong>Image enhancement and exposure correction using convolutional neural network</strong> — M. Parab, A. Bhanushali, P. Ingle, B.N. Pavan Kumar. <em>SN Computer Science</em> 4(2):204, 2023.</li>
+        <li><strong>Panoramic Video Synopsis on Constrained Devices for Security Surveillance</strong> — P.Y. Ingle, Y.G. Kim. <em>Systems</em> 13:110, 2025.</li>
+        <li><strong>Privacy‑Preserving Spatial Crowdsourcing Drone Services for Post‑Disaster Infrastructure Monitoring: A Conditional Federated Learning Approach</strong> — J. Akram, A. Akram, P. Ingle, R.H. Jhaveri, A. Anaissi, A. Akhundzada. <em>IEEE JSTARS</em>, 2025.</li>
+        <li><strong>Transparent and Trustworthy Blockchain‑Based Scheme for the Protection of Vehicular Soft Integrity in Shared Mobility</strong> — U. Ghani, M. Aslam, S. Ullah, T. Ahmad, A. Buriro, P. Ingle, R.H. Jhaveri. <em>IEEE Transactions on Intelligent Transportation Systems</em>, 2025.</li>
+        <li><strong>Multi‑Sensor Data Fusion Across Dimensions: A Novel Approach to Synopsis Generation Using Sensory Data</strong> — P.Y. Ingle, Y.G. Kim. <em>Journal of Industrial Information Integration</em> 100876, 2025.</li>
+        <li><strong>BreastCancerNet: Flask‑Enabled Attention‑Driven Hybrid Dual DNN Framework for Real‑Time Breast Cancer Prediction</strong> — A.J. Prakash, K.K. Patro, P. Ingle, J.J. Pujari, S. Routray, R.H. Jhaveri. <em>Journal article</em>, 2025.</li>
+      </ol>
+
+      <h3 id="pub-conferences" class="pub-heading conference">Conference Papers</h3>
+      <ol class="list pubs">
+        <li><strong>A Comprehensive Study on LLM Agent Challenges</strong> — P. Ingle, M. Parab, P. Lendave, A. Bhanushali, P.K. BN. <em>AAAI Spring Symposium Series</em>, 2024.</li>
+        <li><strong>Innovative method for camouflaged wildlife segmentation in agricultural practices</strong> — M. Parab, P. Ingle. <em>ICACC 2024</em>, 2024.</li>
+        <li><strong>Integrated Interoperability Based Panoramic Video Synopsis Framework</strong> — P. Ingle, Y.G. Kim. <em>ACM SAC</em>, pp. 584–591, 2024.</li>
+        <li><strong>Adversarial Attack on 3D Fused Sensory Data in Drone Surveillance</strong> — A. Bhanushali, M. Parab, B.N.P. Kumar, P. Ingle. <em>ICACC 2024</em>, 2024.</li>
+        <li><strong>A Role‑based Access Control Framework for Video Synopsis in Airport Environment</strong> — P.Y. Ingle, G. Kang, J. Park, Y.G. Kim. <em>KICS Conference Proceedings</em>, 2023.</li>
+        <li><strong>Enhancing Cybersecurity in Internet of Vehicles: A Machine Learning Approach with Explainable AI for Real‑Time Threat Detection</strong> — T. Patel, R. Jhaveri, D. Thakker, S. Verma, P. Ingle. <em>ACM SAC</em>, pp. 2024–2031, 2025.</li>
+        <li><strong>Abnormal Object Detection‑based Video Synopsis Framework in Multiview Video</strong> — P.Y. Ingle, J.Y. Pyo, Y.G. Kim. <em>Annual Conference of KIPS</em>, pp. 213–216, 2022.</li>
+      </ol>
+
+      <h3 id="pub-preprints" class="pub-heading preprints">Preprints & Others</h3>
+      <ol class="list pubs">
+        <li><strong>MT3DNet: Multi‑Task learning Network for 3D Surgical Scene Reconstruction</strong> — M. Parab, P. Lendave, J. Kim, T.Q.D. Nguyen, P. Ingle. <em>arXiv:2412.03928</em>, 2024.</li>
+        <li><strong>Capability‑Based Multi‑Tenant Access Management in Crowdsourced Drone Services</strong> — J. Akram, A. Anaissi, A. Akram, Y. Djenouri, P. Ingle, R.H. Jhaveri. <em>arXiv:2505.01048</em>, 2025.</li>
+      </ol>
+    </section>
+
+    <section id="awards" class="sectionfx">
+      <h2>Awards & Honors</h2>
+      <ul class="list">
+        <li><strong>Outstanding Research Award</strong> — Sejong University. <span class="meta">2022</span></li>
+        <li><strong>Bronze Best Paper Award</strong> — IEEE Seoul Section. <span class="meta">2022</span></li>
+        <li><strong>Paper Idea Award</strong> — Korea Information Processing Society (KIPS). <span class="meta">2022</span></li>
+      </ul>
+    </section>
+
+    <section id="media" class="sectionfx">
+      <h2>Media & Talks</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>YouTube Channel</h3>
+          <p class="meta">Videos on AI, surveillance, SLAM & research updates</p>
+          <p><a href="https://www.youtube.com/@palashingle861" target="_blank" rel="noopener">Visit Channel</a></p>
+        </article>
+        <article class="card">
+          <h3>Invited Talk — IoT+AI/ML Workshop</h3>
+          <p class="meta">Topic: Expert techniques for LiDAR–camera fusion in self-driving cars</p>
+          <p><a href="https://iot-aiml-workshop.github.io/home/#speakers" target="_blank" rel="noopener">Event Page</a></p>
+        </article>
+        <article class="card">
+          <h3>Press Mention — KIPS (Korea Information Processing Society)</h3>
+          <p class="meta">News feature about award/recognition (Korean)</p>
+          <p><a href="https://kips.or.kr/bbs/ga/article/2563" target="_blank" rel="noopener">Read on kips.or.kr</a></p>
+        </article>
+        <article class="card">
+          <h3>Media — Chosun Life & Learning</h3>
+          <p class="meta">Article feature (Korean)</p>
+          <p><a href="https://lifenlearning.chosun.com/pan/site/data/html_dir/2022/12/28/2022122801106.html" target="_blank" rel="noopener">Read on chosun.com</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="sectionfx">
+      <h2>Contact</h2>
+      <div class="tags" aria-label="Social links">
+        <a class="tag pill" href="mailto:palashngl@gmail.com">Email</a>
+        <a class="tag pill" href="https://www.youtube.com/@palashingle861" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+        <a class="tag pill" href="https://github.com/palashngl" onclick="alert('Opening GitHub')" aria-label="GitHub">GitHub</a>
+        <a class="tag pill" href="#" onclick="alert('Replace with your LinkedIn URL'); return false;" aria-label="LinkedIn">LinkedIn</a>
+        <a class="tag pill" href="https://scholar.google.com/citations?user=YZCsmg0AAAAJ&hl=en&oi=ao" onclick="alert('Opening Google Scholar')" aria-label="Google Scholar">Scholar</a>
+        <a class="tag pill" href="#" onclick="alert('Replace with your Twitter/X URL'); return false;" aria-label="Twitter/X">Twitter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="y"></span> Palash Ingle · Built with a11y‑first HTML & CSS
+    </div>
+  </footer>
+
+  <!-- Theme + Reveal scripts -->
+  <script>
+    // Theme toggle
+    (function(){
+      const btn = document.getElementById('themeToggle');
+      const root = document.documentElement;
+      function set(mode){ root.setAttribute('data-theme', mode); try{ localStorage.setItem('theme', mode);}catch(e){} }
+      const saved = (()=>{ try{ return localStorage.getItem('theme'); }catch(e){ return null } })();
+      if (saved) set(saved);
+      btn.addEventListener('click', ()=>{
+        const current = root.getAttribute('data-theme') || 'system';
+        set(current === 'dark' ? 'light' : current === 'light' ? 'system' : 'dark');
+        btn.querySelector('span').textContent = root.getAttribute('data-theme') || 'system';
+      });
+    })();
+    // Reveal on scroll
+    (function(){
+      const io = new IntersectionObserver((entries)=>{
+        for (const e of entries){ if (e.isIntersecting) e.target.classList.add('show'); }
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.sectionfx').forEach(el=>{ el.classList.add('reveal'); io.observe(el); });
+      document.getElementById('y').textContent = new Date().getFullYear();
+    })();
+  </script>
+
+  <!-- Structured data for better SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dr. Palash Yuvraj Ingle",
+    "jobTitle": "Research Professor",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Sejong University",
+      "department": [
+        "Department of Computer Science and Information Security",
+        "Convergence Engineering for Intelligent Drone"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seoul",
+        "addressCountry": "KR"
+      }
+    },
+    "alumniOf": [
+      {"@type": "CollegeOrUniversity", "name": "Sejong University", "description": "Ph.D. in Computer & Information Security (2023)"},
+      {"@type": "CollegeOrUniversity", "name": "J.C. Bose University of Science & Technology (YMCA)", "description": "M.Tech in Computer Science & Engineering (2019)"},
+      {"@type": "CollegeOrUniversity", "name": "Mumbai University", "description": "M.Sc. in Information Technology (2016)"}
+    ],
+    "hasCredential": [
+      {"@type": "EducationalOccupationalCredential", "name": "National Eligibility Test (NET) — Qualified"}
+    ],
+    "affiliation": [
+      {"@type": "Organization", "name": "Zealous Emerging Revolution Organization (ZERO)", "roleName": "President & Founder"},
+      {"@type": "Organization", "name": "Anatta Intelligence Labs", "roleName": "Founder"}
+    ],
+    "email": "mailto:palashngl@gmail.com",
+    "address": {"@type": "PostalAddress","addressLocality": "Seoul","addressCountry": "KR"},
+    "url": "https://your-username.github.io/",
+    "sameAs": [
+      "https://www.youtube.com/@palashingle861"
+    ],
+    "isSubjectOf": [
+      {"@type": "WebPage", "url": "https://kips.or.kr/bbs/ga/article/2563"},
+      {"@type": "WebPage", "url": "https://lifenlearning.chosun.com/pan/site/data/html_dir/2022/12/28/2022122801106.html"},
+      {"@type": "Event", "name": "IoT+AI/ML Workshop — Invited Talk: Expert techniques for LiDAR–camera fusion in self-driving cars", "url": "https://iot-aiml-workshop.github.io/home/#speakers", "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode"}
+    ]
+  }
+  </script>
+</body>
+</html>
