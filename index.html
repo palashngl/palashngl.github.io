@@ -99,6 +99,7 @@
     @keyframes gradientMove { 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
     /* Section-specific tints */
     #about.sectionfx { --tint-a: var(--t-sky); --tint-b: var(--t-slate); }
+    #prototypes.sectionfx { --tint-a: var(--t-emerald); --tint-b: var(--t-slate); }
     #work.sectionfx { --tint-a: var(--t-violet); --tint-b: var(--t-slate); }
     #projects.sectionfx { --tint-a: var(--t-emerald); --tint-b: var(--t-slate); }
     #publications.sectionfx { --tint-a: var(--t-amber); --tint-b: var(--t-slate); }
@@ -111,6 +112,7 @@
     .sectionfx>h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:6px;border-radius:999px;background:linear-gradient(180deg,var(--accent-start,#38bdf8),var(--accent-end,#0ea5e9));box-shadow:0 4px 10px color-mix(in srgb, var(--accent-start,#38bdf8), transparent 70%);background-size:100% 200%;animation:hueFlow 10s ease-in-out infinite;}
     @keyframes hueFlow{0%{background-position:0% 0%;}50%{background-position:0% 100%;}100%{background-position:0% 0%;}}
     #about{--title-color:#0284c7;--accent-start:#38bdf8;--accent-end:#0ea5e9;}
+    #prototypes{--title-color:#0f766e;--accent-start:#34d399;--accent-end:#0f766e;}
     #work{--title-color:#7c3aed;--accent-start:#c4b5fd;--accent-end:#7c3aed;}
     #projects{--title-color:#059669;--accent-start:#34d399;--accent-end:#059669;}
     #publications{--title-color:#b45309;--accent-start:#f59e0b;--accent-end:#b45309;}
@@ -136,6 +138,72 @@
     .pub-tabs .tag:nth-child(1){background:linear-gradient(135deg,#38bdf8,#0284c7); color:#fff}
     .pub-tabs .tag:nth-child(2){background:linear-gradient(135deg,#a78bfa,#7c3aed); color:#fff}
     .pub-tabs .tag:nth-child(3){background:linear-gradient(135deg,#fcd34d,#eab308); color:#1f2937}
+    
+    /* Prototype Evolution Section */
+.prototype-block {
+  margin-top: 24px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+}
+
+.prototype-block + .prototype-block {
+  margin-top: 18px;
+}
+
+.prototype-block h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.prototype-block .proto-meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.prototype-block p {
+  margin: 0 0 14px;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.media-grid img,
+.media-grid video {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #000;
+  display: block;
+}
+
+.span-4 { grid-column: span 4; }
+.span-6 { grid-column: span 6; }
+.span-12 { grid-column: span 12; }
+
+.prototype-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .span-4, .span-6, .span-12 {
+    grid-column: span 12;
+  }
+
+  .media-grid img,
+  .media-grid video {
+    height: auto;
+  }
+}
 
   </style>
 </head>
@@ -146,6 +214,7 @@
         <div class="brand">Palash Ingle</div>
         <div class="nav-links">
           <a href="#about">About</a>
+          <a href="#prototypes">Prototypes</a>
           <a href="#work">Work</a>
           <a href="#projects">Projects</a>
           <a href="#publications">Publications</a>
@@ -236,7 +305,67 @@
         </div>
       </aside>
     </section>
+<section id="prototypes" class="sectionfx">
+  <h2>Prototype Evolution</h2>
+  <p class="lead" style="margin-top:0;">
+    From early unmanned ground vehicle prototyping to embedded robotic systems and disaster-response SLAM platforms, these projects reflect my long-term hands-on journey in robotics, autonomy, and intelligent field systems.
+  </p>
 
+  <div class="prototype-block">
+    <h3>UGCV Prototype</h3>
+    <div class="proto-meta">2016 · M.Sc. in Information Technology · Mumbai University</div>
+    <p>
+      An early unmanned ground vehicle prototype developed for hazardous-object handling and remote operation. This project marked the beginning of my practical work in mobile robotics and robotic manipulation.
+    </p>
+
+    <div class="media-grid">
+      <img class="span-6" src="images/ugcv-1.jpg" alt="UGCV prototype image 1" loading="lazy" />
+      <img class="span-6" src="images/ugcv-2.jpg" alt="UGCV prototype image 2" loading="lazy" />
+    </div>
+
+    <div class="prototype-caption">
+      UGCV — Unmanned Ground Counter-IED Vehicle prototype developed during my M.Sc. research.
+    </div>
+  </div>
+
+  <div class="prototype-block">
+    <h3>M.Tech Project Prototype</h3>
+    <div class="proto-meta">2019 · M.Tech. in Computer Science & Engineering · YMCA University</div>
+    <p>
+      A mobile robotic prototype representing my graduate-stage embedded systems and robotics work, integrating practical electronics, mobility, and experimental hardware development.
+    </p>
+
+    <div class="media-grid">
+      <img class="span-6" src="images/mtech-1.jpg" alt="M.Tech project prototype image" loading="lazy" />
+      <video class="span-6" controls preload="metadata" playsinline>
+        <source src="videos/mtech-prototype.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="prototype-caption">
+      M.Tech prototype with embedded robotic integration and experimental hardware implementation.
+    </div>
+  </div>
+
+  <div class="prototype-block">
+    <h3>DisasterSLAM Rover</h3>
+    <div class="proto-meta">2026 · Research Professor · Sejong University</div>
+    <p>
+      My latest rover platform for disaster-response research, designed around SLAM, field mobility, perception, and multi-sensor intelligence for real-world hazardous environments.
+    </p>
+
+    <div class="media-grid">
+      <img class="span-4" src="images/disaster-1.jpg" alt="DisasterSLAM Rover image 1" loading="lazy" />
+      <img class="span-4" src="images/disaster-2.jpg" alt="DisasterSLAM Rover image 2" loading="lazy" />
+      <img class="span-4" src="images/disaster-3.jpg" alt="DisasterSLAM Rover image 3" loading="lazy" />
+    </div>
+
+    <div class="prototype-caption">
+      DisasterSLAM Rover — a modern disaster-response rover platform for SLAM, navigation, and intelligent environmental perception.
+    </div>
+  </div>
+</section>
     <section id="work" class="sectionfx">
       <h2>Work</h2>
       <div class="grid">
